@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --grey1: #424242;
+    --blue1: #3563E9;
+    --purple1: #433F83;
+    --purple2: #524D98;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: white;
+    padding: 20px 0;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 130px;
+}
+
+.header-nav-list {
+    margin: 0 0 0 auto;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header-nav-link a {
+    color: var(--grey1);
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.header-nav-link a:hover {
+    color: var(--blue1);
+}
+
+.footer {
+    background-color: var(--purple1);
+    padding: 90px 0;
+}
+
+.footer .logo {
+    width: 200px;
+}
+
+.footer-heading {
+    color: white;
+    font-weight: 700;
+}
+
+.footer-row {
+    display: flex;
+}
+
+.footer-col {
+
+}
+
+.footer-subscribe {
+    background-color: var(--purple2);
+}
+
+.footer-bottom {
+    display: flex;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        width: calc(100% - 20px);
+    }
+}
