@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+    --black1: #0D0C1C;
     --grey1: #424242;
+    --lightgrey1: #D9D9D9;
     --blue1: #3563E9;
     --purple1: #433F83;
     --purple2: #524D98;
+    --purple3: #A09BD0;
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-optical-sizing: auto;
 }
 
@@ -26,6 +29,7 @@ img {
 
 .main {
     flex-grow: 1;
+    margin-top: 90px;
 }
 
 .container {
@@ -36,6 +40,10 @@ img {
 .header {
     background-color: white;
     padding: 20px 0;
+    box-shadow: inset 0px -0.888889px 0.888889px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .header-nav {
@@ -52,7 +60,7 @@ img {
     padding: 0;
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 50px;
 }
 
 .header-nav-link a {
@@ -63,8 +71,57 @@ img {
     transition: .3s;
 }
 
-.header-nav-link a:hover {
+.header-nav-link a:hover,
+.header-nav-link.highlight a:hover {
     color: var(--blue1);
+}
+
+.header-nav-link.highlight a {
+    color: var(--purple2);
+}
+
+.section {
+    margin: 60px 0;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.article-item {
+    transition: .3s;
+    padding: 20px 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-item:hover {
+    background-color: var(--purple3);
+}
+
+.article-item:hover .article-item-heading {
+    color: white;
+}
+
+.article-item-heading {
+    color: var(--black1);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 24px;
+    display: block;
+    margin: 25px 0 17px;
+    transition: .3s;
+}
+
+.article-item-time {
+    transition: .3s;
+    color: var(--purple2);
+}
+
+.article-item:hover .article-item-time {
+    color: var(--lightgrey1);
 }
 
 .footer {
@@ -85,9 +142,7 @@ img {
     display: flex;
 }
 
-.footer-col {
-
-}
+.footer-col {}
 
 .footer-subscribe {
     background-color: var(--purple2);
