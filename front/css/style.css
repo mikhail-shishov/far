@@ -69,6 +69,25 @@ img {
     transition: .3s;
 }
 
+.btn {
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .3s;
+    display: inline-block;
+}
+
+.btn-white-fill {
+    background-color: white;
+    color: var(--purple1);
+}
+
+.btn-white-fill:hover {
+    background-color: rgba(255,255,255,.8);
+}
+
 .nav-open .hamburger .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -181,32 +200,40 @@ img {
 
 .footer {
     background-color: var(--purple1);
-    padding: 90px 0;
+    padding: 70px 0;
 }
 
 .footer .logo {
     width: 200px;
 }
 
-.footer-heading {
-    color: white;
-    font-weight: 700;
-}
-
-.footer-row {
-    display: flex;
-}
-
-.footer-col {}
-
-.footer-subscribe {
-    background-color: var(--purple2);
-}
-
 .footer-bottom {
     display: flex;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 40px;
 }
 
+.footer-bottom-social {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+}
+
+.footer-bottom-social-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-bottom-social-item {
+    display: flex;
+    transition: .3s;
+}
+
+.footer-bottom-social-item:hover {
+    opacity: .8;
+}
 
 @media (max-width: 1280px) {
     .container {
@@ -292,6 +319,10 @@ img {
     .article-item {
         padding: 20px;
     }
+
+    .footer-bottom-social, .footer-bottom-social-left {
+        gap: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -307,6 +338,25 @@ img {
     .article-item {
         padding: 10px;
     }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom-social {
+        flex-direction: column;
+        margin: auto;
+        gap: 0;
+    }
+
+    .footer-bottom-social-left {
+        margin: 40px auto;
+    }
+
+    .footer .logo {
+        width: 180px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -318,5 +368,9 @@ img {
         min-height: 100%;
         height: auto;
         width: 100%;
+    }
+
+    .footer-bottom-social-left {
+        gap: 10px;
     }
 }
