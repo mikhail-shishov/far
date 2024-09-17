@@ -7,11 +7,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="img/site.webmanifest">
     <link rel="shortcut icon" href="img/favicon.ico">
     <meta name="msapplication-TileColor" content="#433F83">
-    <meta name="msapplication-config" content="img/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/photoswipe.css">
     <link rel="stylesheet" href="css/style.css">
     <title>FAR</title>
 </head>
@@ -35,42 +34,53 @@
                     <li class="header-nav-link"><a href="">Спецпроекты</a></li>
                     <li class="header-nav-link"><a href="">Тексты</a></li>
                     <li class="header-nav-link"><a href="">О нас</a></li>
-                    <li class="header-nav-link highlight"><a href="http://patreon.com/FAR_" target="_blank" rel="nofollow noopener noreferrer">Поддержать</a></li>
+                    <li class="header-nav-link highlight"><a href="http://patreon.com/FAR_" target="_blank"
+                            rel="nofollow noopener noreferrer">Поддержать</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="main">
-        <section class="section">
+        <article class="article">
             <div class="container">
-                <div class="article-grid">
-                    <div class="article-item">
-                        <a href="" class="article-item-img">
-                            <img src="img/img1.jpg" alt="">
+                <div class="article-top">
+                    <h1>Bringing the power of our open platform to FigJam</h1>
+                    <img src="" alt="">
+                    <div class="pswp-gallery pswp-gallery--single-column test-gallery" id="gallery--getting-started">
+                        <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+                            data-pswp-width="1669" data-pswp-height="2500" target="_blank">
+                            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
                         </a>
-                        <a href="" class="article-item-heading">Ответ деколониальных активисток и активистов ФАС на речь
-                            Юлии Навальной</a>
-                        <span class="article-item-time">5 сентября, 2024</span>
-                    </div>
-                    <div class="article-item">
-                        <a href="" class="article-item-img">
-                            <img src="img/img2.jpg" alt="">
+                        <!-- cropped thumbnail: -->
+                        <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg"
+                            data-pswp-width="1875" data-pswp-height="2500" data-cropped="true" target="_blank">
+                            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt="" />
+                            Cropped
                         </a>
-                        <a href="" class="article-item-heading">Ответ деколониальных активисток и активистов ФАС на речь
-                            Юлии Навальной</a>
-                        <span class="article-item-time">5 сентября, 2024</span>
-                    </div>
-                    <div class="article-item">
-                        <a href="" class="article-item-img">
-                            <img src="img/img3.jpg" alt="">
+                        <!-- data-pswp-src with custom URL in href -->
+                        <a href="https://unsplash.com"
+                            data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+                            data-pswp-width="2500" data-pswp-height="1666" target="_blank">
+                            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
                         </a>
-                        <a href="" class="article-item-heading">Ответ деколониальных активисток и активистов ФАС на речь
-                            Юлии Навальной</a>
-                        <span class="article-item-time">5 сентября, 2024</span>
+                        <!-- Without thumbnail: -->
+                        <a href="http://example.com"
+                            data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"
+                            data-pswp-width="2500" data-pswp-height="1668" target="_blank">
+                            No thumbnail
+                        </a>
+                        <!-- wrapped with any element: -->
+                        <div>
+                            <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"
+                                data-pswp-width="2500" data-pswp-height="1667" target="_blank">
+                                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg"
+                                    alt="" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </article>
     </main>
     <footer class="footer">
         <div class="container">
@@ -113,7 +123,18 @@
             </div>
         </div>
     </footer>
-    <script src="js/scripts.js"></script>
+    <script src="js/photoswipe.umd.min.js"></script>
+    <script src="js/photoswipe-lightbox.umd.min.js"></script>
+    <script src="js/scripts.js" defer></script>
+    <script type="text/javascript">
+        var lightbox = new PhotoSwipeLightbox({
+            gallery: '.test-gallery',
+            children: 'a',
+            // dynamic import is not supported in UMD version
+            pswpModule: PhotoSwipe
+        });
+        lightbox.init();
+    </script>
 </body>
 
 </html>
