@@ -6,9 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const lightbox = new PhotoSwipeLightbox({
-    gallery: '#gallery--getting-started',
+    gallery: '.img-container',
     children: 'a',
-    pswpModule: () => import('photoswipe.esm.js')
   });
   lightbox.init();
 });
