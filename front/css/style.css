@@ -217,6 +217,12 @@ h1 {
     line-height: 1.375;
 }
 
+.article-top, .article hr {
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+    border-bottom: 2px solid var(--lightgrey1);
+}
+
 .article-note {
     border-left: 4px solid var(--black2);
     padding-left: 32px;
